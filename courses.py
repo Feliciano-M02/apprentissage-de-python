@@ -243,9 +243,11 @@ for nombres in liste_entiers:
 print(f"Le nombre de nombres dans la liste qui sont superieur a la moyenne est: {compteur}")
 """
 
+
+
 """
 Regroupez des tâches en utilisant des fonctions
-"""
+
 def afficher(nom, prenom, age=25): 
     print(f"Voici ton {nom} et ton {prenom} {age}")
 
@@ -256,3 +258,57 @@ afficher(nom, prenom)
 
 
 
+# Definitions des fonctions
+# 1
+def salaire_mensuel(salaire_annuel):
+    sal_mensuel= (salaire_annuel/12)
+    return sal_mensuel
+
+# 2
+def salaire_hebdomadaire(salaire_mensuel):
+    sal_hebdomadaire= (salaire_mensuel/4)
+    return sal_hebdomadaire
+
+# 3
+def salaire_horaire(salaire_hebdomadaire, heure_travaillee):
+    sal_horaire= (salaire_hebdomadaire/heure_travaillee)
+    return sal_horaire
+
+# Demandes
+salaire_annuel= float(input("Saisissez votre salaire annuel: "))
+heure_travailee= int(input("Saisissez le nombre d'heure que vous travailler par semaine: "))
+
+# sal_mensuel=salaire_mensuel(salaire_annuel)
+# sal_hebdomadaire=salaire_hebdomadaire(salaire_mensuel(salaire_annuel))
+sal_horaire=salaire_horaire(salaire_hebdomadaire(salaire_mensuel(salaire_annuel)), heure_travailee)
+
+
+print(f"Votre salaire horaire est: {sal_horaire}")
+
+"""
+
+
+
+"""
+Écrivez du code en évitant les erreurs courantes
+"""
+
+
+"""
+Importez des packages Python
+
+
+from operations import * 
+a= float(int(input("Saisissez le premier nombre: ")))
+b = float(int(input("Saisissez le deuxième nombre: ")))
+resultat_addition = addition(a, b)
+print(f"Le résultat est: {resultat_addition}")
+
+
+from operations import * 
+a= float(int(input("Saisissez le premier nombre: ")))
+b = float(int(input("Saisissez le deuxième nombre: ")))
+resultat_multiplication = multiplication(a, b)
+print(f"Le résultat est: {resultat_multiplication}")
+
+"""
