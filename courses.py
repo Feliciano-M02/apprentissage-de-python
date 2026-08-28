@@ -312,3 +312,49 @@ resultat_multiplication = multiplication(a, b)
 print(f"Le résultat est: {resultat_multiplication}")
 
 """
+
+
+
+"""
+Extrayez et transformez des données avec l'extraction web
+
+
+
+import requests
+from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup 
+with open("index.html", "r") as file:
+    soup = BeautifulSoup(file, "html.parser")
+
+with open("index.html", 'r') as file:
+    soup = BeautifulSoup(file, 'html.parser')
+
+    
+
+    
+
+
+from bs4 import BeautifulSoup
+with open("index.html", 'r') as file:
+    soup = BeautifulSoup(file, 'html.parser')
+    title= soup.title
+    texte= soup.find(id='title')
+    infos_produit= soup.find_all("li")
+
+    print(f"Le titre de la page est: {title}")
+    print(f"Le texte de la balise h1 est: {texte}")
+    print(f"Les informations du produits sont: {infos_produit}")
+
+
+"""
+
+"""
+Chargez des données avec Python
+"""
+
+import csv 
+
+with open("input.csv", "r") as file:
+    reader = csv.reader(file)
+    for ligne in reader:
+        print(ligne)

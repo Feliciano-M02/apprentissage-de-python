@@ -5,4 +5,3 @@ def addition(a, b):
 def multiplication(a, b):
     multiplication= a * b
     return multiplication
-
