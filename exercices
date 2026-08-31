@@ -1,0 +1,171 @@
+"""
+#Partie 1 - Lire le code avant de l'écrire
+
+    #Exercice 1 - Trace de variables [facile]
+
+        Quelle est la valeur affichée ? Détailler la valeur de a et b après chaque ligne.
+            a = 5
+            b = 3
+            a = a + b
+            b = a - b
+            a = a - b
+            print(a, b)
+
+
+
+def exercice1(a, b):
+    a = 5
+    b = 3
+    a = a + b  # a = 5+3=8 | 8 | 8
+    b = a - b  # b = 8-3=5 | 2 | 5
+    a = a - b  # a = 8-5=3 | 2 | 3  
+    print(f"{a}, {b}") 
+exercice1(5, 3)
+
+
+"""
+
+
+
+"""
+    Exercice 2 - Tableau de trace [facile]
+        Remplir un tableau avec les colonnes i et total, à chaque passage dans la boucle. Combien de lignes
+        contient ce tableau ? Quelle est la dernière valeur affichée ?
+        total = 0
+        for i in range(1, 6):
+        total = total + i
+        print(i, total)
+
+
+
+
+
+nombres = []    
+total = 0
+for i in range(1, 6):
+    total = total + i
+    print(i, total)
+    nombres.append((i, total))
+    
+
+"""
+
+
+
+"""
+    Exercice 3 - Condition piégeuse [facile]
+        Qu'affiche ce programme pour note = 15 ? Pour note = 8 ? Pour note = 20 ? Expliquer pourquoi la
+        deuxième réponse surprend.
+        note = 15
+        if note > 10:
+        print("Admis")
+        if note > 14:
+        print("Mention")
+        else:
+        print("Pas de mention")
+
+
+def note():
+    note = 15
+    if note > 10:
+        print("Admis")
+        if note > 14:
+            print("Mention")
+        else:
+            print("Pas de mention")
+note()
+
+"""
+
+
+
+"""
+    Exercice 4 - elif ou pas elif [moyen]
+        Ces deux programmes donnent-ils toujours le même résultat ? Trouver une valeur de x pour laquelle
+        ils diffèrent, ou prouver qu'ils sont identiques.
+        # Version A 
+            if x > 0: 
+               print("positif") 
+            elif x > 100: 
+               print("grand")
+
+        # Version B
+            if x > 0:
+                print("positif")
+            elif x > 100:
+                print("grand")
+
+
+def nombre(x):
+    if x > 0:
+        print("positif")
+    elif x > 100:
+        print("grand")
+nombre(30)
+
+"""
+
+
+"""
+    Exercice 5 - Boucle while [moyen]
+        Combien de fois le mot 'tour' est-il affiché ? Quelle est la valeur finale de n ? Que se passerait-il si la
+        ligne n = n // 2 était supprimée ?
+        n = 40
+        while n > 1:
+        print("tour", n)
+        n = n // 2
+        print("fin", n)
+
+
+n= 40
+while n > 1:
+    print("tour", n)
+    n = n // 2
+    print("fin", n)
+    
+    
+"""
+
+
+
+"""
+    Exercice 6 - Listes et copies [moyen]
+        Qu'affiche ce programme ? Attention, il y a un piège classique sur les listes.
+        a = [1, 2, 3]
+        b = a
+        b.append(4)
+        print(a)
+        x = 10
+        y = x
+        y = y + 5
+        print(x)
+
+
+def nombre():
+    a = [1, 2, 3]
+    b = a
+    b.append(4)
+    print(a) 
+     
+    
+    x = 10
+    y = x
+    y = y + 5
+    print(x)  
+nombre()
+
+"""
+
+
+"""
+    Exercice 7 - Trouver les 3 bugs [moyen]
+        Ce programme doit afficher la moyenne des notes. Il contient 3 erreurs (une de syntaxe, une de
+        logique, une d'affichage). Les identifier sans exécuter le code, puis proposer la version corrigée.
+        notes = [12, 8, 17, 5]
+        somme = 0
+        for note in notes
+        somme = somme + note
+        moyenne = somme / len(notes)
+        print("Moyenne :" moyenne)
+
+"""

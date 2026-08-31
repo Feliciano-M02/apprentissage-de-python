@@ -350,7 +350,7 @@ with open("index.html", 'r') as file:
 
 """
 Chargez des données avec Python
-"""
+
 
 import csv 
 
@@ -358,3 +358,7 @@ with open("input.csv", "r") as file:
     reader = csv.reader(file)
     for ligne in reader:
         print(ligne)
+"""
+
+
+
