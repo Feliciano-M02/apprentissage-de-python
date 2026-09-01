@@ -168,4 +168,218 @@ nombre()
         moyenne = somme / len(notes)
         print("Moyenne :" moyenne)
 
+
+
+def notes():
+    notes = [12, 8, 17, 5]
+    somme = 0
+    for note in notes:
+        somme = somme + note
+    moyenne = somme / len(notes)
+    print("Moyenne :", moyenne)
+notes()
+
 """
+
+
+
+"""
+Partie 2 - Conditions et décisions
+
+    Exercice 8 - Le plus grand des trois [facile]
+        Demander trois nombres à l'utilisateur et afficher le plus grand. Contrainte : ne pas utiliser max().
+        Gérer le cas où deux nombres sont égaux.
+
+
+
+
+print("Vous aurez a saisir trois nombres :")
+nombre1 = int(input("Saisissez le premier nombre: "))
+nombre2 = int(input("Saisissez le deuxième nombre: "))
+nombre3 = int(input("Saisissez le troisième nombre: "))
+if nombre1 >= nombre2 and nombre1 >= nombre3:
+    print(f"Le plus grand nombre est: {nombre1}")
+elif nombre2 >= nombre1 and nombre2 >= nombre3:
+    print(f"Le plus grand nombre est: {nombre2}")
+else:
+    print(f"Le plus grand nombre est: {nombre3}")
+
+    
+"""
+
+
+"""
+    Exercice 9 - Année bissextile [moyen]
+        Une année est bissextile si elle est divisible par 4, sauf si elle est divisible par 100, sauf si elle est
+        divisible par 400. Écrire le programme qui répond oui ou non.
+        Tester obligatoirement avec : 2024, 1900, 2000, 2023.
+
+"""
+
+
+"""
+    Exercice 10 - Catégorie d'âge [facile]
+        À partir d'un âge saisi, afficher : Enfant (0 à 12), Adolescent (13 à 17), Adulte (18 à 64), Senior (65 et
+        plus). Refuser un âge négatif ou supérieur à 130 avec un message d'erreur.
+
+
+
+
+age = int(input("Saisissez votre âge: "))
+if age < 0 or age > 130:
+    print("Erreur: âge invalide. Veuillez saisir un âge entre 0 et 130.")
+elif age <= 12:
+    print("Enfant")
+elif age <= 17:
+    print("Adolescent")
+elif age <= 64:
+    print("Adulte")
+else:
+    print("Senior")
+
+
+"""
+
+
+
+"""
+    Exercice 11 - Calculatrice robuste [moyen]
+        Demander deux nombres et une opération (+, -, *, /). Afficher le résultat. Le programme ne doit jamais
+        planter : gérer la division par zéro et l'opération inconnue.
+
+
+
+def operation():
+    nombre1 = int(input("Saisissez le premier nombre: "))
+    nombre2 = int(input("Saisissez le deuxième nombre: "))
+    operation= input("Saisissez l'opération à effectuer (+, -, *, /): ")
+    if operation == "+":
+        resultat= nombre1 + nombre2
+        print(f"Le resultat est {resultat}")
+    elif operation == "-":
+        resultat= nombre1 - nombre2
+        print(f"Le resultat est {resultat}")
+    elif operation == "*":
+        resultat= nombre1 * nombre2
+        print(f"Le resultat est {resultat}")
+    elif operation == "/":
+        if nombre2 != 0:
+            resultat= nombre1 / nombre2
+            print(f"Le resultat est {resultat}")
+        else:
+            print("Erreur: division par zéro.")
+    else:
+        print("Erreur: opération inconnue.")
+
+operation()
+
+
+"""
+
+
+
+"""
+    Exercice 12 - Triangle valide [moyen]
+        À partir de trois longueurs, dire si un triangle est possible (chaque côté doit être inférieur à la somme
+        des deux autres). Si oui, préciser s'il est équilatéral, isocèle ou quelconque.
+
+"""
+
+
+
+
+
+"""
+Partie 3 - Boucles et répétitions
+
+    Exercice 13 - Table de multiplication [facile]
+        Afficher la table de multiplication d'un nombre saisi, de 1 à 10, sous la forme 7 x 1 = 7.
+        Variante : afficher toutes les tables de 1 à 9 les unes après les autres.
+
+
+nombre = int(input("Saisissez un nombre: "))
+print(f"Table de multiplication de {nombre}:")
+for i in range(1, 11):
+    resultat = nombre * i
+    print(f"{nombre} * {i}= {resultat}")
+
+"""
+
+
+"""
+  Exercice 14 - Somme et moyenne [facile]
+        Demander des nombres à l'utilisateur jusqu'à ce qu'il tape 0. Afficher ensuite combien de nombres ont
+        été saisis, leur somme et leur moyenne. Attention au cas où l'utilisateur tape 0 dès le début. 
+
+while 
+
+"""
+
+
+"""
+    Exercice 15 - Devine le nombre [moyen]
+        L'ordinateur choisit un nombre au hasard entre 1 et 100 (import random, puis random.randint(1, 100)).
+        Le joueur propose des nombres, le programme répond 'trop grand' ou 'trop petit' jusqu'à la bonne
+        réponse, puis affiche le nombre d'essais.
+        Variante : limiter à 7 essais maximum.
+
+
+"""
+
+
+
+"""
+    Exercice 16 - Pyramide d'étoiles [moyen]
+        Afficher une pyramide dont la hauteur est saisie par l'utilisateur. 
+
+nombre = int(input("Saisissez la hauteur de la pyramide: "))
+for i in range(1, nombre):
+
+
+"""
+
+
+
+"""
+    Exercice 17 - Nombre premier [moyen]
+        Dire si un nombre saisi est premier. Ensuite, afficher tous les nombres premiers entre 2 et 100.
+        Question de raisonnement : pourquoi est-il inutile de tester les diviseurs au-delà de la racine carrée du
+        nombre ?
+
+        
+
+def nombre_premier():
+    nombre = int(input("Saisissez un nombre: "))
+    
+nombre_premier()
+
+
+"""
+
+
+
+
+"""
+    Exercice 18 - Inverser un nombre [difficile]
+        Inverser les chiffres d'un entier : 1234 devient 4321. Contrainte : interdit de convertir en chaîne de
+        caractères, il faut utiliser uniquement % et //.
+        Ensuite, dire si un nombre est un palindrome (12321).
+
+
+"""
+
+
+"""
+    Exercice 19 - Suite de Fibonacci [moyen]
+Afficher les N premiers termes de la suite : 0, 1, 1, 2, 3, 5, 8, 13...
+Chaque terme est la somme des deux précédents. N est saisi par l'utilisateur.
+
+
+"""
+
+
+nombre = int(input("Saisissez un nombre : "))
+a, b = 0, 1
+for _ in range(nombre):
+    print(a, end=' ')
+    a, b = b, a + b

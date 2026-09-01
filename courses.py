@@ -147,6 +147,8 @@ print(f"Le deuxieme nombre est {nombre2.isnumeric()}")
 if not nombre1.isnumeric() or not nombre2.isnumeric():
     raise SystemExit("Fin du programme")
 
+    
+    
 nombre1 = int(input("Saisissez le premier nombre: "))
 nombre2 = int(input("Saisissez le deuxième nombre: "))
 
